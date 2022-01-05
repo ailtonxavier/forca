@@ -1,9 +1,24 @@
+from random import randrange
+
 def jogar():
   print("###################################")
   print("### Bem vindo ao jogo da forca! ###")
   print("###################################")
 
-  palavra_secreta = "Maça".upper()
+  arquivo = open("palavras.txt", "r", encoding="utf-8")
+  palavras = []
+  
+  for linha in arquivo:
+    linha = linha.strip()
+    palavras.append(linha)
+
+  arquivo.close()
+
+  numero = randrange(0,len(palavras))
+  palavra_secreta = palavras[numero].upper()
+
+  print(palavras)
+
   letras_acertadas = ["_" for letras in palavra_secreta]
 
   enforcou = False
