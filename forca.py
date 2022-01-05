@@ -1,7 +1,7 @@
 def jogar():
-  print("***********************************")
-  print("*** Bem vindo ao jogo da forca! ***")
-  print("***********************************")
+  print("###################################")
+  print("### Bem vindo ao jogo da forca! ###")
+  print("###################################")
 
   palavra_secreta = "banana"
 
@@ -14,10 +14,13 @@ def jogar():
     chute = input("Qual letra? ").strip()
     
     index = 0
-    letra = ""
+    
+    # para letra em palavra_secre: faça!
     for letra in palavra_secreta:
+      
       if chute.upper() == letra.upper():
         print(f"Encontrei a letra {letra} na posição {index}")
+      
       index = index + 1
 
     print("jogando...")
